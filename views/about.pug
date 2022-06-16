@@ -1,0 +1,65 @@
+extends layout
+
+block content
+
+  nav.nav
+    a.link(href='/')
+      span &larr;
+      |  Back
+
+  article.portfolio-about
+    .inner-wrapper.flex-row-wrap.two-col
+      .about-intro-box.box
+
+        h2 About me
+        h3 Front-end Web Developer with a love of tech
+
+        .about-bio
+          p Hi I&apos;m Jamie! Thanks for visiting my profile, I&apos;m a Front-end Web Developer from Liverpool who loves technology. I have been a learning as a developer since 2018, where I studied a techdegree with Treehouse. I now work for a company called Key Group where my tech stack expanded with the likes of C# and .NET.
+
+
+      .skills-contact-box.box
+        h2 Tech Stack
+          ul.skills
+            li
+              img.icon(src='./static/icons/html5.svg', alt='HTML')
+            li
+              img.icon(src='./static/icons/css3.svg', alt='CSS')
+            li
+              img.icon(src='./static/icons/sass.svg', alt='SASS')
+            li
+              img.icon(src='./static/icons/javascript.svg', alt='JavaScript')
+            li
+              img.icon(src='./static/icons/csharp.svg', alt='C#')
+            li
+              img.icon(src='./static/icons/nodedotjs.svg', alt='Node.js')
+            li
+              img.icon(src='./static/icons/react.svg', alt='React')
+            li
+              img.icon(src='./static/icons/bootstrap.svg', alt='Bootstrap')
+            li
+              img.icon(src='./static/icons/express.svg', alt='Express')
+            li
+              img.icon(src='./static/icons/pug.svg', alt='Pug')
+            li
+              img.icon(src='./static/icons/webpack.svg', alt='Webpack')
+            li
+              img.icon(src='./static/icons/dotnet.svg', alt='.NET')
+            li
+              img.icon(src='./static/icons/git.svg', alt='Git')
+            li
+              img.icon(src='./static/icons/azuredevops.svg', alt='Azure DevOps')
+
+        h2 Contact
+        ul
+          li
+            p Phone: 555-555-1234
+          li
+            p E-mail: jamie.reardon91@gmail.com
+        a.btn-link(href='https://www.linkedin.com/in/jmereardon17/') LinkedIn
+        a.btn-link(href='https://github.com/jmereardon17') GitHub
+
+  nav.nav
+    a(href='/')
+      span &larr;
+      |  Back

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+  article.portfolio-project-thumbs
+    .box
+      h2 Work
+      p Check out a few of my projects from my portfolio below
+    .projects-box.box.grid
+      each project in projects
+        .cell
+          a(href=`/projects/${project.id}`)
+            img.thumbnail(src=project.image_urls[0], alt=project.project_name)
+            div.overlay
+          section.project-text
+            h5
+              a(href=`/projects/${project.id}`)= project.project_name
+

@@ -1,0 +1,14 @@
+extends layout
+
+block content 
+
+  article.error
+    .inner-wrapper
+      .box
+        img(src="/static/img/error-500.jpg", alt="Internal Server Error (500)")
+        h3=err.message
+
+  nav.nav
+    a.link(href='/')
+      span &larr;
+      |  Back
