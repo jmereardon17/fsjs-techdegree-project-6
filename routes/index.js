@@ -12,15 +12,16 @@ router.get('/projects', (req, res) => {
 
 router.get('/projects/:id', (req, res) => {
   const { id } = req.params;
-  let project;
+  const project = data.projects.find(project => project.id.toString() === id);
 
-  if (id) {
-    project = data.projects.find(project => project.id.toString() === id)
+  if (project) {
+    res.render('project', { project });
   } else {
-    project = data.projects[Math.floor(Math.random() * data.projects.length)];
+    const err = new Error();
+    err.status = 404;
+    err.message = 'Page Not Found';
+    console.error(`(${err.status}) ${err.message}`);
   }
-
-  res.render('project', { project });
 });
 
 module.exports = router;
