@@ -1,0 +1,472 @@
+/*
+  CSS Variables
+*/
+:root {
+  --white: #fff;
+  --black: #000;
+  --racing-green: #141f19;
+  --nevada: #646768;
+  --shark: #212526;
+  --cod-gray: #0a0a0a;
+  --white-sand: #fefefe;
+  --gallery: #eaeaea;
+  --picton-blue: #2dbeeb;
+  --spray: #6ad0f0
+}
+
+/*
+  Main styles
+*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font: normal 20px/1.7 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #646768;
+  background: #141f19 url('../img/macbook-setup.jpg') no-repeat center / cover;
+  text-align: center;
+  transform: translateX(0px);
+  transition: all 0.4s ease-out;
+}
+
+article {
+  border-radius: 5px;
+  background: var(--white-sand);
+  margin: 24px 0;
+}
+
+h1 {
+  font: 400 70px/1 'Montserrat Alternates', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--white-sand);
+  margin: 0;
+}
+
+h2,h3,h4,h5,h6, .sidebar p {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  color: #212526;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s;
+}
+
+p a {
+  color: var(--picton-blue);
+  font-weight: 400;
+}
+
+p a:hover {
+  color: #6ad0f0;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+article ul li p {
+  margin: 0;
+}
+
+.flex-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 30px;
+}
+
+.box {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 15px 30px;
+  background: var(--white-sand);
+  border-bottom: 1px solid var(--gallery);
+}
+
+.box h1,
+.box h6 {
+  margin: 0 auto 8px;
+}
+
+.box h6 {
+  font-size: 1rem;
+}
+
+
+/*
+  Sidebar and mobile header
+*/
+nav {
+  width: 100%;
+  padding: 20px 0;
+  text-align: left;
+}
+
+nav a,
+.sidebar a {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 1rem;
+  font-size: 26px;
+  color: var(--white); 
+}
+
+nav a:hover,
+.sidebar a:hover {
+  background: var(--white-sand);
+  color: var(--cod-gray);
+}
+
+nav a {
+  width: 100%;
+  vertical-align: middle;
+}
+
+nav a span {
+  font-size: 1.25rem;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  min-width: 300px;
+  max-width: 300px;
+  height: 100%;
+  min-height: 100%;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.sidebar-info-box {
+  margin: auto;
+}
+
+.thumbnail-box {
+  padding: 0 10px;
+}
+
+.sidebar .thumbnail {
+  width: 100px;
+  max-width: 250px;
+  border: 4px solid var(--white);
+  border-radius: 50%;
+}
+
+.dev-intro-box {
+  padding: 10px;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, .2);
+  margin-top: 20px;
+  position: relative;
+}
+
+.divider::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background: var(--white-sand);
+  height: 4px;
+  width: 95px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: -2px;
+  border-radius: .25rem;
+}
+
+.sidebar ul {
+  margin: 0 0 50px;
+}
+
+.sidebar p {
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  line-height: 1.6;
+  font-size: 13px;
+  color: var(--white);
+}
+
+.header {
+  vertical-align: middle;
+  color: var(--white-sand);
+  height: 40px;
+  padding: 0.5rem;
+  background: var(--cod-gray);
+  border-left: 1px solid var(--cod-gray);
+}
+
+.header-info-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header span {
+  font-family: 'Montserrat Alternates', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline-block;
+}
+
+.header button {
+  vertical-align: top;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  width: 20px;
+  height: 16px;
+  border: none;
+  background: var(--cod-gray);
+  margin-right: 10px;
+  border-top: 2px solid var(--white-sand);
+  border-bottom: 2px solid var(--white-sand);
+}
+
+.header button:after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: var(--white-sand);
+}
+
+
+/*
+  Home page styles
+*/
+.portfolio-intro {
+  max-width: 1200px;
+  padding: 40px 50px 30px;
+}
+
+.portfolio-intro h1 {
+  font-size: 1.5rem;
+  color: var(--cod-gray);
+  margin: 0 auto 8px;
+}
+
+.portfolio-intro p {
+  text-rendering: optimizeLegibility;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--gallery);
+}
+
+.projects-box h5 {
+  font-size: 13px;
+  color: #222;
+  margin: 0;
+}
+
+.cell .project-text {
+  display: flex;
+  align-items: center;
+  min-height: 103.41px;
+  padding: 14px 33px 16px 20px;
+  text-align: left;
+  background-color: var(--picton-blue);
+}
+
+.cell .project-text a {
+  color: var(--white);
+  font-size: 24px;
+  transition: .3s;
+}
+
+.cell .project-text a:hover {
+  color: var(--shark);
+}
+
+.cell > a {
+  width: 100%;
+  display: block;
+  border-top: 1px solid rgba(10, 10, 10, 0.2);
+  border-left: 1px solid rgba(10, 10, 10, 0.2);
+  border-right: 1px solid rgba(10, 10, 10, 0.2);
+  position: relative;
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(33, 37, 38, .5);
+  transition: .3s;
+}
+
+.cell:hover .overlay {
+  opacity: 1;
+}
+
+.cell img {
+  width: 100%;
+  min-height: 270px;
+  display: block;
+}
+
+
+/* 
+  About and project pages styles 
+*/
+
+.portfolio-about h2 {
+  margin: 0;
+}
+
+.about-bio p {
+  padding-top: 40px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+}
+
+.skills {
+  line-height: 1.15;
+}
+
+.skills li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.skills li:last-child {
+  margin-right: 0;
+}
+
+.skills-contact-box ul {
+  margin-bottom: 35px;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 1065px;
+  margin-bottom: 15px;
+  border: 4px solid var(--white);
+  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+}
+
+.btn-link {
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  color: var(--white-sand);
+  width: 100%;
+  max-width: 200px;
+  margin: auto auto 5px;
+  padding: 0.85em 1em;
+  background-color: var(--picton-blue);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.btn-link:hover {
+  background-color: var(--spray);
+}
+
+
+/* 
+  Tablet layout styles 
+*/
+@media screen and (min-width: 768px) {
+  .sidebar h5 {
+    font-size: 1.9rem;
+  }
+
+  .portfolio-intro h1 {
+    font-size: 3rem;
+  }
+
+  .box {
+    border-bottom: none;
+  }
+
+  .two-col .box:nth-of-type(1) {
+    width: 68%;
+  }
+  .two-col .box:nth-of-type(2) {
+    width: 32%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(371px, 1fr));
+  }
+
+  .cell .project-text a {
+    font-size: 28px;
+  }
+}
+
+
+/* 
+  Desktop layout styles 
+*/
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    left: 0;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .wrapper {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+  }
+
+  .inner-wrapper {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1150px) {
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+}
