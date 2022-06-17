@@ -23,4 +23,4 @@ Extras for the Exceeds Expectations Grading:
   - transitions for links and project thumbnail hovers
   - Custom logo
 
-Grade: TBC
+Grade: Exceeds Expectations
